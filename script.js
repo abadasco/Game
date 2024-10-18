@@ -10,7 +10,7 @@ let randomNumber = Math.floor(Math.random() * 100) + 1;
             let userGuess = Number(guessField.value);
 
             if (userGuess < 1 || userGuess > 100) {
-                status.textContent = "Te rog introdu un număr între 1 și 100.";
+                status.textContent = "Please enter a number between 1 and 100.";
                 status.classList.remove('win', 'lose');
                 return;
             }
@@ -18,20 +18,20 @@ let randomNumber = Math.floor(Math.random() * 100) + 1;
             guessesLeft--;
 
             if (userGuess === randomNumber) {
-                status.textContent = "Felicitări! Ai ghicit numărul corect!";
+                status.textContent = "Congratulations! You guessed the number right!";
                 status.classList.add('win');
                 submitGuess.disabled = true;
                 guessField.disabled = true;
             } else if (guessesLeft === 0) {
-                status.textContent = `Ai pierdut! Numărul corect era ${randomNumber}.`;
+                status.textContent = `You lost! The correct number was ${randomNumber}.`;
                 status.classList.add('lose');
                 submitGuess.disabled = true;
                 guessField.disabled = true;
             } else {
                 if (userGuess < randomNumber) {
-                    status.textContent = "Numărul este prea mic!";
+                    status.textContent = "The number is too small!";
                 } else {
-                    status.textContent = "Numărul este prea mare!";
+                    status.textContent = "The number is too high!";
                 }
                 status.classList.remove('win', 'lose');
                 remainingGuesses.textContent = `Încercări rămase: ${guessesLeft}`;
