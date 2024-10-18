@@ -1,0 +1,89 @@
+ body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #acb6e5);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 350px;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            border: 2px solid #74ebd5;
+            border-radius: 10px;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        input:focus {
+            border-color: #4ca1af;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4ca1af;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2b6f77;
+        }
+
+        #status {
+            font-size: 1.5em;
+            margin: 20px 0;
+            color: #333;
+            min-height: 30px;
+        }
+
+        #remainingGuesses {
+            font-size: 1.1em;
+            color: #4ca1af;
+        }
+
+        .win {
+            color: #4CAF50;
+            animation: bounce 0.5s ease-in-out;
+        }
+
+        .lose {
+            color: #e74c3c;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
