@@ -34,6 +34,6 @@ let randomNumber = Math.floor(Math.random() * 100) + 1;
                     status.textContent = "The number is too high!";
                 }
                 status.classList.remove('win', 'lose');
-                remainingGuesses.textContent = `Încercări rămase: ${guessesLeft}`;
+                remainingGuesses.textContent = `Remaining attempts: ${guessesLeft}`;
             }
         });
